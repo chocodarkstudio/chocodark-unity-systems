@@ -36,7 +36,7 @@ float MaxInnerPivotDistance
 float InnerPivotDistance
 ```
 La posición de la cámara se obtiene mediante el cálculo de un triángulo rectángulo, en el cual la hipotenusa representa la distancia deseada. Los catetos del triángulo corresponden a la altura en el eje Y (cateto opuesto) y al desplazamiento en el eje Z (cateto adyacente), tomando en cuenta el ángulo de rotación en el eje X del pivote.  
-![alt text](image-2.png)
+![alt text](image-2.png)  
 La cámara **siempre** se desplaza sobre la recta de la hipotenusa.
 
 ## Detección de obstaculos (Wall-clipping)
@@ -68,5 +68,5 @@ bool LockMouse
 ProjectOnForward(Vector3 localDirection)
 ```
 Proyecta la dirección dada (localSpace) sobre el forward del controlador, y la devuelve en worldSpace.  
-![alt text](image-4.png)
 Es útil para mover objetos, como el personaje, con inputs de teclado basados en la orientación de la cámara. 
+![alt text](image-4.png)
