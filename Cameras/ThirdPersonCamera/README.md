@@ -18,7 +18,7 @@ Por el contrario, aumentar este valor provoca que el movimiento sea más **insta
 ## Pivote interno (InnerPivot)
 Objeto que se utiliza como punto de referencia para mover, rotar y alejar la cámara.
 Debe ser hijo del controlador y puede ser la cámara misma.  
-![alt text](image-1.png)
+![alt text](docs/image-1.png)
 
 ## Desplazar el pivote interno
 Para obtener un foco de orientación deseado de la cámara, buscaremos desplazar el pivote interno.
@@ -36,14 +36,14 @@ float MaxInnerPivotDistance
 float InnerPivotDistance
 ```
 La posición de la cámara se obtiene mediante el cálculo de un triángulo rectángulo, en el cual la hipotenusa representa la distancia deseada. Los catetos del triángulo corresponden a la altura en el eje Y (cateto opuesto) y al desplazamiento en el eje Z (cateto adyacente), tomando en cuenta el ángulo de rotación en el eje X del pivote.  
-![alt text](image-2.png)  
+![alt text](docs/image-2.png)  
 La cámara **siempre** se desplaza sobre la recta de la hipotenusa.
 
 ## Detección de obstaculos (Wall-clipping)
 Se realiza un raycast desde el vértice opuesto de la recta que forma la hipotenusa del InnerPivot y hacia la parte trasera, detectando todos los objetos con un collider detrás de la cámara.
 Se identifica el objeto más cercano y se establece la distancia del impacto como la nueva distancia del InnerPivot.  
 En caso de que no se detecten obstáculos, se utiliza la distancia máxima por defecto 'MaxInnerPivotDistance'.  
-![alt text](image-3.png)
+![alt text](docs/image-3.png)
 
 ## Rotación por mouse
 ```csharp
@@ -69,4 +69,4 @@ ProjectOnForward(Vector3 localDirection)
 ```
 Proyecta la dirección dada (localSpace) sobre el forward del controlador, y la devuelve en worldSpace.  
 Es útil para mover objetos, como el personaje, con inputs de teclado basados en la orientación de la cámara. 
-![alt text](image-4.png)
+![alt text](docs/image-4.png)
