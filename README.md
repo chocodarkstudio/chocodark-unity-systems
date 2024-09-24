@@ -18,4 +18,4 @@ Documentación: [GlobalAudio.md](./GlobalAudio/README.md)
 
 Controlador de camara en 3ra persona con wall-clipping.
 
-Documentación: [ThirdPersonCamera.md](./Cameras/docs/ThirdPersonCamera.md)
+Documentación: [ThirdPersonCamera.md](./Cameras/ThirdPersonCamera/README.md)
